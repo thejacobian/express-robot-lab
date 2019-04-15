@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action = "/robots/<%=id%>?_method=PUT" method = "POST">
+   <h3>Name: <input type ="text" name = "name" value = "<%=robot.name%>"></h3>
+   <h4>Job: <input type = "text" name = "job" value = "<%=robot.job%>"></h4>
+   <p>Old Image <img src = "<%=robot.img%>"></p>
+   <h5>New Image: <input type = "text" name = "img" value ="<%=robot.img%>"></h5>
+   <button type = "submit">Edit Robot</button>
+</form>
+</body>
