@@ -20,14 +20,25 @@ router.post('/', (req, res)=>{
 });
 
 
+router.get('/:id/edit', (req, res)=>{
+    res.render('edit.ejs', {
+        "robot": Robots[req.params.id],
+        id: req.params.id
+    });
+});
 
 router.get('/:id', (req, res)=>{
     res.render('show.ejs', {
-        "robot": Robots[req.params.id]
+        "robot": Robots[req.params.id],
+        id: req.params.id 
     });
 });
 
 
+router.put('/:id', (req, res)=>{
+    Robots[req.params.id] = req.body
+    res.redirect('/robots')
+});
 
 
 router.delete('/:id', (req, res)=>{
